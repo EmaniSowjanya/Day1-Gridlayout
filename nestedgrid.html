@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NestedGrid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr;*/
+            grid-template-columns: repeat(2, 2fr 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: minmax(150px, auto);
+
+        }
+
+        .grid-container>div {
+            padding: 1em;
+            background-color: palevioletred;
+        }
+
+        .grid-container>div:nth-child(even) {
+            background-color:blueviolet;
+        }
+
+        #div1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+            justify-items: start;
+        }
+
+        #div1 div {
+            border: 3px solid yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <dic class="grid-container">
+        <div id="div1">bus:
+            <div>seats</div>
+            <div>driver</div>
+            <div>passengers</div>
+            <div>steering</div>
+
+        </div>
+        <div>2car</div>
+        <div>3auto</div>
+        <div>4bike</div>
+        <div>5bicycle</div>
+        </div>
+</body>
+
+</html>
